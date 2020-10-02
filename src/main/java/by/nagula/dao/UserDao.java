@@ -10,7 +10,7 @@ public interface UserDao {
     User showUserByLogin(String login);
     List<User> showAll();
     void remove(int id);
-    void update(int id);
+    void update(User user);
     boolean containsUserId(int id);
     boolean containsUserLogin(String login);
     boolean containsUserPassword(String password);

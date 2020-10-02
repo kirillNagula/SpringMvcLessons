@@ -44,10 +44,10 @@ public class UserService {
 
 
     public void removeUser(int id){
-
+        userDao.remove(id);
     }
 
-    public void updateUser(int id){
-
+    public void updateUser(User user){
+        userDao.update(user);
     }
 }

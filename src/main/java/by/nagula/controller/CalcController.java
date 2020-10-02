@@ -14,7 +14,7 @@ public class CalcController {
     @GetMapping(path = "/calc")
     public String getPage(Model model){
         model.addAttribute("message");
-       return "home";
+       return "calc";
     }
 
     @PostMapping(path = "/calc")
@@ -28,6 +28,6 @@ public class CalcController {
                 break;
             case "div": model.addAttribute("message", "Результат деления " + num1 / num2);
         }
-        return "home";
+        return "calc";
     }
 }

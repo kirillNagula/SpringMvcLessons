@@ -17,5 +17,8 @@
     <button> Submit </button>
 </form>
 
+${message1}
+${message2}
+
 </body>
 </html>

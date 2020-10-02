@@ -49,12 +49,12 @@ public class InMemoryUserDao implements UserDao{
 
     @Override
     public void remove(int id) {
-
+        users.remove(id);
     }
 
     @Override
-    public void update(int id) {
-
+    public void update(User user) {
+        users.set(user.getId(), user);
     }
 
     @Override

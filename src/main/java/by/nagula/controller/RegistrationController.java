@@ -32,9 +32,9 @@ public class RegistrationController {
         User user1 = userService.showByLogin(user.getLogin());
         if (user.getPassword().equals(user1.getPassword())){
             httpSession.setAttribute("user", user1);
-            modelAndView.setViewName("index");
+            modelAndView.setViewName("redirect:/home/index");
         } else{
-            throw new WrongPasswordException();
+            throw new WrongPasswordException("Wrong password");
         }
         return modelAndView;
     }
@@ -49,7 +49,7 @@ public class RegistrationController {
     public ModelAndView addRegistration(User user, ModelAndView modelAndView){
         System.out.println(user);
         userService.createUser(user);
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("redirect:/home/index");
         return modelAndView;
     }
 }
